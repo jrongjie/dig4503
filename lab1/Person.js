@@ -26,8 +26,13 @@ class Person {
     }
 
     //adds a new function to a class
-    speak () {
-        console.log("Hi");
+    speak() {
+        // figure out why only backticks allow for calling variables with text
+        /* WHY DOES CONSOLE.LOG THROUGH AN UNDEFINED!? (remember to look up later)
+        console.log(`My name is ${this.name} and my favorite color is ${this.favoriteColor}.`);*/
+
+        //WHY IS IT RETURN?!
+        return(`My name is ${this.name} and my favorite color is ${this.favoriteColor}.`);
     }
 }
 

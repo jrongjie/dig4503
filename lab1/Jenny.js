@@ -1,9 +1,9 @@
-const Jenny = require("./Jenny.js");
+const Person = require("./Person.js");
 
 class Jenny extends Person {
-    constructor(name, favoriteColor, status) {
+    constructor(name, favoriteColor, age) {
         super(name, favoriteColor);
-        this.status = status;
+        this.age = age;
     }
 }
 

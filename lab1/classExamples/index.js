@@ -1,3 +1,4 @@
+/*
 const Component = require("./Component.js");
 
 class Header extends Component {
@@ -7,3 +8,4 @@ class Header extends Component {
     }
 }
 module.exports = Header;
+*/

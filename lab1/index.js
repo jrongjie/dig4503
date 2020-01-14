@@ -1,12 +1,8 @@
 //class notes in Person.js
-const Person = require("./Person.js");
+const Jenny = require("./Jenny.js");
 
 //creates a new instance
-let p = new Person("Dan", "Green"); 
-let j = new Person("Jenny", "Blue");
-let s = new 
+let j = new Jenny("Jenny", "Blue", "22");
 
-//checking in terminal
-//"node index.js"
-console.log(j.name);
-
+//checking in terminal "node index.js"
+console.log(j.speak());
