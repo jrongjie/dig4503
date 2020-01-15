@@ -19,6 +19,8 @@ whenever we extend the properties we need a super and constructor
 */
 
 //OOP example
+const chalk = require("chalk");
+
 class Person {
     constructor (name, favoriteColor) {
         this.name = name;
@@ -32,7 +34,7 @@ class Person {
         console.log(`My name is ${this.name} and my favorite color is ${this.favoriteColor}.`);*/
 
         //WHY IS IT RETURN?!
-        return(`My name is ${this.name} and my favorite color is ${this.favoriteColor}.`);
+        return(chalk.blue(this.name));
     }
 }
 
