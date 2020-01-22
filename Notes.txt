@@ -1,0 +1,14 @@
+Jan 15, 2020
+Objects have properties and functions, and have 3 possible relationships (is a, has a, none). "extends" gives an is a relationship. "properties" gives a has a relationship.  
+
+class example {
+    constructor(name){
+        //can pass values through a constructor and set default properties. 
+
+        this.name = name; //means whatever is passed in will become the property name for the class. 
+    }
+
+    speak() {
+        //can access properties in the constructor. 
+    }
+}
