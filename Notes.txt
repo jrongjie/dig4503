@@ -12,3 +12,26 @@ class example {
         //can access properties in the constructor. 
     }
 }
+
+Jan 22, 2020
+
+JS XML (JSX)
+    1. one root element (wrapping)
+    2. all elements must close
+    3. JS expressions are allowed, statements are not
+        NOT ALLOWED: not equal, <, >, else, for(), while()
+        ALLOWED: functions, variables (have values)
+            let para = <p>Hi!</p>;
+                instead...
+            let value = 7;
+            para = <p>{vlaue}</p>;
+
+JSX + WebPack
+    components are elements
+        <example 1>
+            ->new Example()
+            -> Example.render()
+    1. components take care of themselves
+    2. all componenets can render        
+
+    nmp run build // will make everything ready to drop on a server
