@@ -35,3 +35,38 @@ JSX + WebPack
     2. all componenets can render        
 
     nmp run build // will make everything ready to drop on a server
+
+Jan 27, 2020
+Server-side
+    HTTP based on the client-server model where the client sends requests and the server sends a response
+        Methods: GET, POST
+
+    URL can be broken down into 3 categories for http://google.com:80/video/somehting
+        1. Protocol (http://)
+
+        2. Server (google.com) + Port (80), ports are always there and are typically assumed to be port 80 [65,535 possible ports, anything less than 100 is already dedicated. 80 is web server/HTTP. 27 is FTP. 443 is HTTPS]
+        
+        3. Path (/video/something)
+
+            Server: GET / index.html 
+            Client: localhost/index.html
+
+Express: instead of using HTTP, use express that is based on and uses HTTP (don't reinvent the wheel)
+    Based in Node
+        index.js
+            const Express = require ("express");
+            const App = Express(); //app is equal to a new express
+            app listen (80, function() {
+                console.log ('server running');
+            })
+
+        node index.js //Callback Function: "when something happens, call me"
+        ctr + c //breaks server
+        
+
+New project:
+    mkdir example
+    cd example
+    npm init -y
+    npm install express
+    (recommend after installation to open VSC for node projects)
