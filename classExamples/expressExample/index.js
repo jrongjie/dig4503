@@ -7,7 +7,7 @@ const Person = require("./Person.js");
 
     //let db = [5, 24, 25, 16];
 
-App.get("/", (Request, Response) => {
+App.get("/", (req, res) => { //Request, Response
     //Response.send("Hi");
     //Response.send("<p>Hi</p>");
     //Response.json({"db": db[1]}); 
