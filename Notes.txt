@@ -60,9 +60,11 @@ Express: instead of using HTTP, use express that is based on and uses HTTP (don'
                 console.log ('server running');
             })
 
-        node index.js //Callback Function: "when something happens, call me"
-        ctr + c //breaks server
-        
+node index.js //Callback Function: "when something happens, call me"
+    ctr + c //breaks server
+
+npm install nodemon
+
 
 New project:
     mkdir example
@@ -70,3 +72,11 @@ New project:
     npm init -y
     npm install express
     (recommend after installation to open VSC for node projects)
+
+Feb 5, 2020
+Midterm (30 questions, multiple choice, T/F, Fill in the blank)
+
+REST: 
+    collection/item
+    many/one
+
