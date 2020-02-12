@@ -9,9 +9,7 @@ const pokemons = require("json-pokemon");
 
 
 //be specific
-App.get("/", (req, res) => {
-    res.send("To search for Pokemon, please add  name or id and then the name or number of the pokemon to search for in the address bar!");
-});
+App.get("/", Express.static("public"));
 
 //route: "/id/:id"
 App.get("/id/:id", (req, res) => {

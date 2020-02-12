@@ -1,0 +1,23 @@
+<html>
+    <body>
+        <script>
+            function clicker(event){
+                event.prevenDefault();
+
+                let element = document.querySelector("input");
+                console.log();
+                
+                fetch("/api").then((Response) => {
+                    return Response.json();
+                }).then((ProcessedResponse) => {
+                    console.log(ProcessedResponse);
+            });
+        }
+        </script>
+        <form action="text">
+            <input type="text">
+            <button>Click me</button>
+        </form>
+        <div onClick="clicker">Click me!</div>
+    </body>
+</html>

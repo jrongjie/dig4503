@@ -80,3 +80,4 @@ REST:
     collection/item
     many/one
 
+Errors
