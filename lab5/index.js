@@ -52,5 +52,5 @@ App.get("/name/:name", (req, res) => {
 });
 
 App.listen(port, () => {
-    console.log ("Server running");
+    console.log ("Got 99 errors but a running server ain\'t one of them!");
 });
