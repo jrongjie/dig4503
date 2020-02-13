@@ -19,6 +19,23 @@
                     }
                 });
             }
+            function nameGrabber(event) {
+                event.preventDefault();
+                
+                let formName = document.querySelector("#pokeName");
+                
+                fetch("/id/" + formName.value).then((res) => {
+                    return res.json();
+                }).then((processed) => {
+                    let reporting = document.querySelector("#reportingArea");
+                    
+                    if(processed.error) {
+                        reporting.innerHTML = processed.error;
+                    } else {
+                        reporting.innerHTML = processed.name;
+                    }
+                });
+            }
         </script>
 
         <form onsubmit="idGrabber(event)">
