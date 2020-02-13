@@ -24,7 +24,7 @@
                 
                 let formName = document.querySelector("#pokeName");
                 
-                fetch("/id/" + formName.value).then((res) => {
+                fetch("/name/" + formName.value).then((res) => {
                     return res.json();
                 }).then((processed) => {
                     let reporting = document.querySelector("#reportingArea");
