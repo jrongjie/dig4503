@@ -35,6 +35,7 @@ if (result.error) {
 App.get("/name/:name", (req, res) => {
     //est name
     let pokeName = req.params.name;
+    let result = {"error" : "Unregistered Pokemon, ya faker!"};
 
     pokemons.forEach((value) => {
         if(value.name.toLowerCase() == pokeName){
