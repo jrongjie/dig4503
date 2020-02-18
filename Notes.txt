@@ -81,3 +81,18 @@ REST:
     many/one
 
 Errors
+
+Feb 17, 2020
+    Get your server working first then insomnia
+    Insomnia [environment | requests | response]
+    
+    React
+    operates off of the component model that branches off into 
+        everything is a componenets
+        components take care of themselves
+    render() chain returns html
+
+    JSX
+        1. all elements must close
+        2. one root function
+        3. only expressions
