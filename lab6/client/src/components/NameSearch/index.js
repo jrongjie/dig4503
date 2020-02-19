@@ -6,7 +6,7 @@ class NameSearch extends React.Component {
                     
         let formName = document.querySelector("#pokeName");
         
-        fetch("/name/" + formName.value).then((res) => {
+        fetch("http://localhost:80/name/" + formName.value).then((res) => {
             return res.json();
 
         }).then((processed) => {
@@ -22,7 +22,7 @@ class NameSearch extends React.Component {
     render() {
         return(
             <div>
-                <form onsubmit="nameGrabber(event)">
+                <form onSubmit={this.nameGrabber}>
                     <h1>Give me your name</h1>
                     <input type="text" id="pokeName"/>
                     <button>Submit</button>

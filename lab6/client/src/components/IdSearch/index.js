@@ -6,7 +6,7 @@ class IdSearch extends React.Component {
         
         let formId = document.querySelector("#pokeId");
                     
-        fetch("/id/" + formId.value).then((res) => {
+        fetch("http://localhost:80/id/" + formId.value).then((res) => {
             return res.json();
         
         }).then((processed) => {
@@ -22,7 +22,7 @@ class IdSearch extends React.Component {
     render(){
         return (
             <div>
-                <form onsubmit="idGrabber(event)">
+                <form onSubmit={this.idGrabber}>
                     <h1>Give me your ID</h1>
                     <input type="text" id="pokeId"/>
                     <button>Submit</button>

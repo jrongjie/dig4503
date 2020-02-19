@@ -7,7 +7,8 @@ const chalk = require("chalk");
 //pokemon to catch
 const pokemons = require("json-pokemon");
 
-
+const cors = require("cors");
+App.use(cors());
 //be specific
 App.get("/", Express.static("client/build"));
 
