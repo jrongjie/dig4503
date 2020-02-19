@@ -1,0 +1,22 @@
+[
+    {
+        "name": "Big Bang Theory",
+        "score": 81,
+        "episode": 136
+    },
+    {
+        "name": "Spongebob",
+        "score": 72,
+        "episode": 262
+    },
+    {
+        "name": "Johnny Bravo",
+        "score": 75,
+        "episode": 65
+    },
+    {
+        "name": "Samurai Jack",
+        "score": 95,
+        "episode": 62
+    }
+]

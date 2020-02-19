@@ -1,0 +1,18 @@
+{
+  "name": "200219",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "cd client && npm run start",
+    "server": "node index.js",
+    "start": "concurrently 'npm:build' 'npm:server'"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^5.1.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1"
+  }
+}
