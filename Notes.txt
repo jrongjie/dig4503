@@ -96,3 +96,12 @@ Feb 17, 2020
         1. all elements must close
         2. one root function
         3. only expressions
+
+Mar 2, 2020
+    Requirements
+        - route that returns an array
+        - client that will show results to user
+            As I type, refines the search
+    Route:
+        Method: GET
+        Path: /movies/title/
