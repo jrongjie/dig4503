@@ -1,12 +1,8 @@
-// Require Express
 const Express = require('express');
-// Create an application based on a single instance of Express
 const App = Express();
-// Save the port number to listen to
 const port = 80;
-// Require cors
+
 const cors = require('cors');
-// Setup cors as a middleware BEFORE any other routes!
 App.use(cors());
 
 // Require Database from "./Database.js"
@@ -24,7 +20,6 @@ let database = new Database();
 // - Either an "error" object OR 
 // - The movie object matching the search
 App.get("/movies/title/:title", (req, res) => {
-
     // Set an "error" result to send back first
     let result = {"error": "Could not a movie with that title!"};
 
@@ -37,12 +32,9 @@ App.get("/movies/title/:title", (req, res) => {
             // If it is not null, set result to whatever movie is
             result = movie;
         }
-        
         // Send as a response: either the "error" object or the movie object found
         res.json(result);
-
     });
-
 });
 
 // TODO: Add a route /movies/year/:year
@@ -50,5 +42,5 @@ App.get("/movies/title/:title", (req, res) => {
 // Listen on 'port'
 App.listen(port, () => {
     // Let the user know the server is running
-    console.log("Server running!")
+    console.log("You have just crossed over into The Twilight Zone.");
 });
