@@ -5,9 +5,11 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "export": "next export"
   },
   "dependencies": {
+    "express": "^4.17.1",
     "json-pokemon": "^1.0.0",
     "next": "9.3.1",
     "react": "16.13.0",

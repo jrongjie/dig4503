@@ -6,7 +6,7 @@ class IdSearch extends React.Component {
         
         let formId = document.querySelector("#pokeId");
                     
-        fetch("http://localhost:80/id/" + formId.value).then((res) => {
+        fetch("http://localhost:80//api/pokemon/id/" + formId.value).then((res) => {
             return res.json();
         
         }).then((processed) => {

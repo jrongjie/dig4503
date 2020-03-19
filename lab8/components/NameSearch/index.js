@@ -6,7 +6,7 @@ class NameSearch extends React.Component {
                     
         let formName = document.querySelector("#pokeName");
         
-        fetch("http://localhost:80/name/" + formName.value).then((res) => {
+        fetch("http://localhost:80/api/pokemon/name/" + formName.value).then((res) => {
             return res.json();
 
         }).then((processed) => {
