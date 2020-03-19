@@ -1,4 +1,4 @@
-class Home extends React.Component {
+class Pokemon extends React.Component {
 
     getName() {
       let formName = document.querySelector("#pokeName");
@@ -44,9 +44,9 @@ class Home extends React.Component {
     }
   }
   
-  export default Home;
+export default Pokemon;
 
-  /* 
+/* 
 import NameSearch from "../components/NameSearch";
 import IdSearch from "../components/IdSearch";
 
