@@ -2,6 +2,7 @@ import React from "react";
 
 class NameSearch extends React.Component {
     nameGrabber(event){
+        event.preventDefault();
                     
         let formName = document.querySelector("#pokeName");
         
@@ -21,12 +22,11 @@ class NameSearch extends React.Component {
     render() {
         return(
             <div>
-                <form onSubmit={this.nameGrabber}>
-                    <h1>Give me your name</h1>
-                    <input type="text" id="pokeName"/>
-                    <button>Submit</button>
-                </form>
-            </div>
+                <h1>Give me your name</h1>
+                <input type="text" id="pokeName"/>
+                <button>Submit</button>
+                <div id="reportingArea"></div>
+            </div>  
         );
     };
 }

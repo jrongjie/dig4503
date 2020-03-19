@@ -2,7 +2,6 @@ import React from 'react';
 
 class IdSearch extends React.Component {
     idGrabber(event){
-        event.preventDefault();  
         
         let formId = document.querySelector("#pokeId");
                     

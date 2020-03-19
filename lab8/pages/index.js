@@ -1,21 +1,4 @@
-/* 
-import NameSearch from "../components/NameSearch";
-import IdSearch from "../components/IdSearch";
-
-const Home = () => {
-    return (
-        <div>
-            <NameSearch/>
-            <IdSearch/>
-            <div id = "reportingArea"></div>
-        </div>
-    );
-}
-
-export default Home
-*/
-
-class Pokemon extends React.Component {
+class Home extends React.Component {
 
     getName() {
       let formName = document.querySelector("#pokeName");
@@ -60,4 +43,21 @@ class Pokemon extends React.Component {
     }
   }
   
-  export default Pokemon;
+  export default Home;
+
+  /* 
+import NameSearch from "../components/NameSearch";
+import IdSearch from "../components/IdSearch";
+
+const Home = () => {
+    return (
+        <div>
+            <NameSearch/>
+            <IdSearch/>
+            <div id = "reportingArea"></div>
+        </div>
+    );
+}
+
+export default Home
+*/
