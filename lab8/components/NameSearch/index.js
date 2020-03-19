@@ -6,16 +6,16 @@ class NameSearch extends React.Component {
                     
         let formName = document.querySelector("#pokeName");
         
-        fetch("http://localhost:80/api/pokemon/name/" + formName.value).then((res) => {
+        fetch("http://localhost:3000/api/pokemon/name/" + formName.value).then((res) => {
             return res.json();
 
         }).then((processed) => {
             let reporting = document.querySelector("#reportingArea");
             
             if(processed.error) {
-                reporting.innerHTML = processed.error;
+                reporting.innerHTML = "You're a fake, that\'s not a real name!";
             } else {
-                reporting.innerHTML = "So you are" + processed.id+ "a " + processed.name + "! I knew it!";
+                reporting.innerHTML = "According to my pokedex, " + processed.id+ ", you\'re a " + processed.name + "! I knew it!";
             }
         });
     };

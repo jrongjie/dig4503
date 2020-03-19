@@ -6,14 +6,14 @@ class IdSearch extends React.Component {
         
         let formId = document.querySelector("#pokeId");
                     
-        fetch("http://localhost:80//api/pokemon/id/" + formId.value).then((res) => {
+        fetch("http://localhost:3000//api/pokemon/id/" + formId.value).then((res) => {
             return res.json();
         
         }).then((processed) => {
             let reporting = document.querySelector("#reportingArea");
                 
             if(processed.error) {
-                reporting.innerHTML = processed.error;
+                reporting.innerHTML = "You're a fake, that\'s not a real number!";
             } else {
                 reporting.innerHTML = "According to my pokedex, " + processed.id+ ", you\'re a " + processed.name + "! I knew it!";
             }

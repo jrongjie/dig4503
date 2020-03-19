@@ -1,3 +1,19 @@
+import NameSearch from "../components/NameSearch";
+import IdSearch from "../components/IdSearch";
+
+const Home = () => {
+    return (
+        <div>
+            <NameSearch/>
+            <IdSearch/>
+            <div id = "reportingArea"></div>
+        </div>
+    );
+}
+
+export default Home
+
+/* 
 class Pokemon extends React.Component {
 
     getName() {
@@ -7,9 +23,9 @@ class Pokemon extends React.Component {
       .then((processed) => {
         let resultElement = document.querySelector("#reportingArea");
         if(processed.error) {
-          resultElement.innerHTML = "Could not find!";
+          resultElement.innerHTML = "You're a fake, that\'s not a real name!";
         } else {
-          resultElement.innerHTML = "Its ID is " + processed.id;
+            "According to my pokedex, " + processed.id+ ", you\'re a " + processed.name + "! I knew it!";
         }
       });
     }
@@ -20,7 +36,7 @@ class Pokemon extends React.Component {
         .then((processed) => {
           let resultElement = document.querySelector("#reportingArea");
           if(processed.error) {
-            resultElement.innerHTML = "Could not find!";
+            resultElement.innerHTML = "You're a fake, that\'s not a real number!";
           } else {
             resultElement.innerHTML = "According to my pokedex, " + processed.id+ ", you\'re a " + processed.name + "! I knew it!";
           }
@@ -44,3 +60,4 @@ class Pokemon extends React.Component {
   }
   
   export default Pokemon;
+*/
