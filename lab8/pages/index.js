@@ -1,3 +1,4 @@
+/* 
 import NameSearch from "../components/NameSearch";
 import IdSearch from "../components/IdSearch";
 
@@ -12,8 +13,8 @@ const Home = () => {
 }
 
 export default Home
+*/
 
-/* 
 class Pokemon extends React.Component {
 
     getName() {
@@ -49,6 +50,7 @@ class Pokemon extends React.Component {
             <h1>Give me your name</h1>
             <input type="text" id="pokeName" />
             <button onClick={() => { this.getName() } }>SUBMIT</button>
+
             <h1>Give me your ID</h1>
             <input type="text" id="pokeId" />
             <button onClick={() => { this.getId() } }>SUBMIT</button>
@@ -56,8 +58,6 @@ class Pokemon extends React.Component {
         </div>
       );
     }
-  
   }
   
   export default Pokemon;
-*/

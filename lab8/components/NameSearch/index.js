@@ -2,7 +2,6 @@ import React from "react";
 
 class NameSearch extends React.Component {
     nameGrabber(event){
-        event.preventDefault();
                     
         let formName = document.querySelector("#pokeName");
         
