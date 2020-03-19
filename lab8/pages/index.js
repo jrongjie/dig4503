@@ -22,7 +22,7 @@ class Pokemon extends React.Component {
           if(processed.error) {
             resultElement.innerHTML = "Could not find!";
           } else {
-            resultElement.innerHTML = "So you are" + processed.id+ "a " + processed.name + "! I knew it!";
+            resultElement.innerHTML = "According to my pokedex, " + processed.id+ ", you\'re a " + processed.name + "! I knew it!";
           }
         });
       }

@@ -15,7 +15,7 @@ class IdSearch extends React.Component {
             if(processed.error) {
                 reporting.innerHTML = processed.error;
             } else {
-                reporting.innerHTML = "So you are" + processed.id+ "a " + processed.name + "! I knew it!";
+                reporting.innerHTML = "According to my pokedex, " + processed.id+ ", you\'re a " + processed.name + "! I knew it!";
             }
         });
     };
