@@ -15,7 +15,7 @@ class IdSearch extends React.Component {
             if(processed.error) {
                 reporting.innerHTML = processed.error;
             } else {
-                reporting.innerHTML = "So you are a " + processed.name + "! I knew it!";
+                reporting.innerHTML = "So you are" + processed.id+ "a " + processed.name + "! I knew it!";
             }
         });
     };

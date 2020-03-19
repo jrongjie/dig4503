@@ -1,11 +1,11 @@
 class Pokemon extends React.Component {
 
     getName() {
-      let name = document.querySelector("#nameInput");
-      fetch("/api/pokemon/name/" + name.value)
+      let formName = document.querySelector("#pokeName");
+      fetch("/api/pokemon/name/" + formName.value)
       .then((res) => { return res.json(); } )
       .then((processed) => {
-        let resultElement = document.querySelector("#results");
+        let resultElement = document.querySelector("#reportingArea");
         if(processed.error) {
           resultElement.innerHTML = "Could not find!";
         } else {
@@ -14,15 +14,15 @@ class Pokemon extends React.Component {
       });
     }
     getId() {
-        let id = document.querySelector("#idInput");
-        fetch("/api/pokemon/id/" + id.value)
+        let formId = document.querySelector("#pokeId");
+        fetch("/api/pokemon/id/" + formId.value)
         .then((res) => { return res.json(); } )
         .then((processed) => {
-          let resultElement = document.querySelector("#results");
+          let resultElement = document.querySelector("#reportingArea");
           if(processed.error) {
             resultElement.innerHTML = "Could not find!";
           } else {
-            resultElement.innerHTML = "Its ID is " + processed.id;
+            resultElement.innerHTML = "So you are" + processed.id+ "a " + processed.name + "! I knew it!";
           }
         });
       }
@@ -30,13 +30,13 @@ class Pokemon extends React.Component {
     render() {
       return (
         <div>
-            <h1>What's your name?</h1>
-            <input type="text" id="nameInput" />
+            <h1>Give me your name</h1>
+            <input type="text" id="pokeName" />
             <button onClick={() => { this.getName() } }>SUBMIT</button>
-            <h1>What's your id?</h1>
-            <input type="text" id="idInput" />
+            <h1>Give me your ID</h1>
+            <input type="text" id="pokeId" />
             <button onClick={() => { this.getId() } }>SUBMIT</button>
-            <div id="results"></div>
+            <div id="reportingArea"></div>
         </div>
       );
     }
