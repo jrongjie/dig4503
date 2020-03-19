@@ -2,6 +2,7 @@ class Home extends React.Component {
 
     getName() {
       let formName = document.querySelector("#pokeName");
+      
       fetch("/api/pokemon/name/" + formName.value.toLowerCase())
       .then((res) => { return res.json(); } )
       .then((processed) => {
