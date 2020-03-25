@@ -26,11 +26,27 @@ class App extends React.Component{
           if(processed.error){
               resultElement.innerHTML = "You're a fake, that\'s not a real number!";
           } else{
-              resultElement.innerHTML = "According to my pokedex, " + processed.id+ ", you\'re a " + processed.name + "! I knew it!";
+              resultElement.innerHTML = "According to my pokedex, these are the" + processed.type+ "pokemon: " + processed.name + "!";
 
           }
       });
   }
+
+  getType(){
+    let pokeType = document.querySelector("#pokeType");
+
+    fetch("/api/pokemon/type/" + pokeType.value).then((res)=>{return res.json();}).then((processed)=> {
+        
+        let resultElement = document.querySelector("#results");
+
+        if(processed.error){
+            resultElement.innerHTML = "You're a fake, that\'s not a real type!";
+        } else{
+            resultElement.innerHTML = "According to my pokedex, " + processed.id+ ", you\'re a " + processed.name + "! I knew it!";
+
+        }
+    });
+}
 
   render(){
     return(
@@ -48,7 +64,7 @@ class App extends React.Component{
             <div>
                 <h3>What's your type?!</h3>
                 <input type="text" id="pokeType"/>
-                <button onClick = {() => {this.getId()}}>Search</button>
+                <button onClick = {() => {this.getType()}}>Search</button>
             </div>
             <div id="results"></div>
         </div>

@@ -2,7 +2,7 @@ class TypeSearch extends React.Component{
 
     getName(){
 
-        let name = document.querySelector("#pokemonName");
+        let name = document.querySelector("#pokeType");
 
         fetch("/api/pokemon/type" + type.value).then((res)=>{return res.json();}).then((processed)=>{
             
