@@ -18,7 +18,7 @@ class IdSearch extends React.Components{
     render(){
         return(
         <div>
-        input type="text" id="pokemonId"/>
+            <input type="text" id="pokemonId"/>
             <button onClick = {() => {this.getID()}}>Submit</button>
         </div>
         )

@@ -45,8 +45,8 @@ class App extends React.Component{
                 <input type="text" id="pokemonId"/>
                 <button onClick = {() => {this.getId()}}>Search</button>
             </div>
-            <div> 
-                <h3>Give me your ID!</h3>
+            <div>
+                <h3>What's your type?!</h3>
                 <input type="text" id="pokeType"/>
                 <button onClick = {() => {this.getId()}}>Search</button>
             </div>
