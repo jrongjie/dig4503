@@ -1,3 +1,38 @@
+import IdSearch from "../components/IdSearch/IdSearch";
+import NameSearch from "../components/NameSearch/NameSearch";
+import TypeSearch from "../components/TypeSearch/TypeSearch";
+
+class Home extends React.Component {
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            nameResults: "",
+            idResults: "",
+            typeResults: "",
+        };
+    }
+    nameResults(processed) {
+        this.setState({nameResults: processed});
+    }
+    idResults(processed) {
+        this.setState({idResults: processed});
+    }
+
+    return (
+        <div>
+            <NameSearch callback = { () => { this.nameResults() }}/>
+            <IdSearch/>
+            <TypeSearch/>
+            <div id="results">
+                <p></p>
+            </div>
+        </div>
+    );
+}
+export default Home;
+
+/*
 class App extends React.Component{
 
   getName(){
@@ -72,4 +107,4 @@ class App extends React.Component{
   }
 }
 
-export default App;
+export default App; */

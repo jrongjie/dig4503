@@ -1,5 +1,7 @@
 class NameSearch extends React.Component{
-
+    clickHandler() {
+        let nameSearchElement = document.querySelector();
+    }
     getName(){
 
         let name = document.querySelector("#pokemonName");
