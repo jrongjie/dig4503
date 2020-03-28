@@ -13,7 +13,7 @@ class TypeSearch extends React.Component{
             if(processed.error) {
                 reporting.innerHTML = "You don\'t know you\'re stuff do you? That\'s not a real pokemon type!";
             } else {
-                reporting.innerHTML = "According to my pokedex, " + processed.id+ ", you\'re a " + processed.name + "! I knew it!";
+                reporting.innerHTML = "Are you looking for, " + processed.id+ ", a " + processed.name + "?";
             }
         });
     }

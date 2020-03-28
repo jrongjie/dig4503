@@ -1,23 +1,42 @@
+import React from "react";
 import Head from "next/head";
 import Link from "next/link";
 
-const PokeId = () => {
-    return(
-        <div>
-            <Head>
-                <title>ID</title>
-            </Head>
-            <Link href="/">
-                <a>Back</a>
-            </Link>
+class PokeId extends React.Component {
 
-            <h3>Give me your ID!</h3>
-            <input type="text" id="pokeId"/>
-            <button onClick = {() => {this.getId()}}>Search</button>
+    getId(){
+        let pokeId = document.querySelector("#pokeId");
+  
+        fetch("/api/pokemon/id/" + pokeId.value).then((res)=>{return res.json();}).then((processed)=> {
+            
+            let resultElement = document.querySelector("#reportingArea");
+  
+            if(processed.error){
+                resultElement.innerHTML = "We don\'t have any pokemon under that ID number at this shelter.";
+            } else{
+                resultElement.innerHTML = "Are you looking for, " + processed.id+ ", a " + processed.name + "?";
+  
+            }
+        });
+    }
+    render(){
+        return(
+            <div>
+                <Head>
+                    <title>ID</title>
+                </Head>
+                <Link href="/">
+                    <a>Go Back</a>
+                </Link>
 
-            <div id="reportingArea"></div>
-        </div>
-    )
+                <h3>What ID number is the pokemon you're looking for under?</h3>
+                <input type="text" id="pokeId"/>
+                <button onClick = {() => {this.getId()}}>Search</button>
+
+                <div id="reportingArea"></div>
+            </div>
+        )
+    }
 }
 
 export default PokeId;
