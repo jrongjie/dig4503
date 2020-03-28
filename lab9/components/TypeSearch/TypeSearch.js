@@ -1,17 +1,19 @@
+import React from 'react';
+
 class TypeSearch extends React.Component{
 
-    getName(){
+    getType(){
 
-        let name = document.querySelector("#pokeType");
+        let pokeType = document.querySelector("#pokeType");
 
-        fetch("/api/pokemon/type" + type.value).then((res)=>{return res.json();}).then((processed)=>{
-            
-            let resultElement = document.querySelector("#results");
-
-            if(processed.error){
-                resultElement.innerHTML = "Could not find your Search";
-            } else{
-                resultElement.innerHTML = "The Pokemon ID is:"+ processed.id+ "and you chose:"+processed.name+".";
+        fetch("/api/pokemon/typeList/" + pokeType.value).then((res)=>{return res.json();}).then((processed)=>{
+            this.props.callback(processed);
+            let reporting = document.querySelector("#reportingArea");
+              
+            if(processed.error) {
+                reporting.innerHTML = "You don\'t know you\'re stuff do you? That\'s not a real pokemon type!";
+            } else {
+                reporting.innerHTML = "According to my pokedex, " + processed.id+ ", you\'re a " + processed.name + "! I knew it!";
             }
         });
     }
@@ -19,9 +21,10 @@ class TypeSearch extends React.Component{
     render(){
         return(
             <div>
+                <h1>What's your type?!</h1>
                 <input type="text" id="pokeType"/>
-                <button onClick={() => {this.getType()}}>Search</button>
-                <div id="results"></div>
+                <button>Submit</button>
+                <div id="reportingArea"></div>
             </div>
         )
     }

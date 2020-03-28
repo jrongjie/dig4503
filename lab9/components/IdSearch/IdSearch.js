@@ -1,28 +1,35 @@
-class IdSearch extends React.Components{
-    getID(){
+import React from 'react';
 
-        let id = document.querySelector("#pokemonID");
-
-        fetch("/api/pokemon/id/" + id.value).then((res)=>{return res.json();}).then((processed)=> {
-            
-            let resultElement = document.querySelector("#results");
-
-            if(processed.error){
-                resultElement.innerHTML ="Could not find your search. Please try again."
-            } else{
-                resultElement.innerHTML = "The Pokemon ID you entered is: "+ processed.id+" and the ID belongs to: "+processed.name+".";
-
+class IdSearch extends React.Component {
+    idGrabber(event){
+        event.preventDefault();
+        
+        let pokeId = document.querySelector("#pokeId");
+                    
+        fetch("http://localhost:3000//api/pokemon/id/" + pokeId.value).then((res) => {
+            return res.json();
+        
+        }).then((processed) => {
+            let reporting = document.querySelector("#reportingArea");
+                
+            if(processed.error) {
+                reporting.innerHTML = "You're a fake, that\'s not a real number!";
+            } else {
+                reporting.innerHTML = "According to my pokedex, " + processed.id+ ", you\'re a " + processed.name + "! I knew it!";
             }
         });
-    }
+    };
     render(){
-        return(
-        <div>
-            <input type="text" id="pokemonId"/>
-            <button onClick = {() => {this.getID()}}>Submit</button>
-        </div>
-        )
-    }
+        return (
+            <div>
+                <form onSubmit={this.idGrabber}>
+                    <h1>Give me your ID</h1>
+                    <input type="text" id="pokeId"/>
+                    <button>Submit</button>
+                </form>
+            </div>
+        );
+    };
 }
 
 export default IdSearch;

@@ -1,32 +1,34 @@
-class NameSearch extends React.Component{
-    clickHandler() {
-        let nameSearchElement = document.querySelector();
-    }
-    getName(){
+import React from "react";
 
-        let name = document.querySelector("#pokemonName");
+class NameSearch extends React.Component {
+    nameGrabber(event){
+        event.preventDefault();
+                    
+        let pokeName = document.querySelector("#pokeName");
+        
+        fetch("http://localhost:3000/api/pokemon/name/" + pokeName.value).then((res) => {
+            return res.json();
 
-        fetch("/api/pokemon/name" + name.value).then((res)=>{return res.json();}).then((processed)=>{
+        }).then((processed) => {
+            let reporting = document.querySelector("#reportingArea");
             
-            let resultElement = document.querySelector("#results");
-
-            if(processed.error){
-                resultElement.innerHTML = "Could not find your Search";
-            } else{
-                resultElement.innerHTML = "The Pokemon ID is:"+ processed.id+ "and you chose:"+processed.name+".";
+            if(processed.error) {
+                reporting.innerHTML = "You're a fake, that\'s not a real name!";
+            } else {
+                reporting.innerHTML = "According to my pokedex, " + processed.id+ ", you\'re a " + processed.name + "! I knew it!";
             }
         });
-    }
-
-    render(){
+    };
+    render() {
         return(
             <div>
-                <input type="text" id="pokemonName"/>
-                <button onClick={() => {this.getName()}}>Search</button>
-                <div id="results"></div>
-            </div>
-        )
-    }
+                <h1>Give me your name</h1>
+                <input type="text" id="pokeName"/>
+                <button>Submit</button>
+                <div id="reportingArea"></div>
+            </div>  
+        );
+    };
 }
 
 export default NameSearch;
