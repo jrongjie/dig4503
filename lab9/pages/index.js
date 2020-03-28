@@ -1,3 +1,6 @@
+import Head from "next/head";
+import Link from "next/link";
+//import Style from './Styles.module.css'
 
 class Pokemon extends React.Component{
 
@@ -51,22 +54,22 @@ class Pokemon extends React.Component{
   render(){
     return(
         <div>
-            <div>
-                <h3>Give me your name!</h3>
-                <input type="text" id="pokeName"/>
-                <button onClick={() => {this.getName()}}>Search</button>
-            </div>
-            <div>
-                <h3>Give me your ID!</h3>
-                <input type="text" id="pokeId"/>
-                <button onClick = {() => {this.getId()}}>Search</button>
-            </div>
-            <div>
-                <h3>What's your type?!</h3>
-                <input type="text" id="pokeType"/>
-                <button onClick = {() => {this.getType()}}>Search</button>
-            </div>
-            <div id="reportingArea"></div>
+            <Head>
+                <title>Pokemon</title>
+            </Head>
+
+            <h1>Find All sorts of Pokemon!</h1>
+            <Link href="/id">
+                <a>Search by ID</a>
+            </Link>
+                <br/>
+            <Link href="/name">
+                <a>Search by Name</a>
+            </Link>
+                <br/>
+            <Link href="/type">
+                <a>Search by Type</a>
+            </Link>
         </div>
     )
   }

@@ -1,4 +1,4 @@
-import getPokemon from 'json-pokemon/getPokemon';
+import Pokemon from 'json-pokemon/getPokemon';
 
 export default (req, res) => {
 
