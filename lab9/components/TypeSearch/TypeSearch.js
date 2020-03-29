@@ -6,15 +6,15 @@ class TypeSearch extends React.Component{
 
         let pokeType = document.querySelector("#pokeType");
 
-        fetch("/api/pokemon/typeList/" + pokeType.value).then((res)=>{return res.json();}).then((processed)=>{
+        fetch("/api/pokemon/type/" + pokeType.value).then((res)=>{return res.json();}).then((processed)=>{
             this.props.callback(processed);
             let reporting = document.querySelector("#reportingArea");
               
-            if(processed.error) {
+            /*if(processed.error) {
                 reporting.innerHTML = "You don\'t know you\'re stuff do you? That\'s not a real pokemon type!";
             } else {
                 reporting.innerHTML = "Are you looking for, " + processed.id+ ", a " + processed.name + "?";
-            }
+            }*/
         });
     }
 

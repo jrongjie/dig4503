@@ -7,7 +7,7 @@ class PokeType extends React.Component {
     getType(){
         let pokeType = document.querySelector("#pokeType");
     
-        fetch("/api/pokemon/typeList/" + pokeType.value).then((res)=>{return res.json();}).then((processed)=>{
+        fetch("/api/pokemon/type/" + pokeType.value).then((res)=>{return res.json();}).then((processed)=>{
             this.props.callback(processed);
             let reporting = document.querySelector("#reportingArea");
               
