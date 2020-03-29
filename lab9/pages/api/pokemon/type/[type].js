@@ -1,6 +1,7 @@
 import Pokemon from 'json-pokemon/getPokemon';
 
 function findType(req, res){
+    
     for(let i=0; i<pokemon.length; i++){
         for(let p=0; pokemon[i].typeList.length; p++){
             if(pokemon[i].typeList[p] == req.query.pokeType){
