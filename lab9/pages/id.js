@@ -1,6 +1,7 @@
 import React from "react";
 import Head from "next/head";
 import Link from "next/link";
+import Style from '../components/Style.module.css'
 
 class PokeId extends React.Component {
 
@@ -21,12 +22,12 @@ class PokeId extends React.Component {
     }
     render(){
         return(
-            <div>
+            <div className={Style.general}>
                 <Head>
                     <title>ID</title>
                 </Head>
                 <Link href="/">
-                    <a>Go Back</a>
+                    <a className={Style.links}>Go Back</a>
                 </Link>
 
                 <h3>What ID number is the pokemon you're looking for under?</h3>

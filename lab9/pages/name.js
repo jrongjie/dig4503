@@ -1,6 +1,7 @@
 import React from "react";
 import Head from "next/head";
 import Link from "next/link";
+import Style from '../components/Style.module.css'
 
 class PokeName extends React.Component {
     getName(){
@@ -20,12 +21,12 @@ class PokeName extends React.Component {
 
     render(){
         return(
-            <div>
+            <div className={Style.general}>
                 <Head>
                     <title>ID</title>
                 </Head>
                 <Link href="/">
-                    <a>Go Back</a>
+                    <a className={Style.links}>Go Back</a>
                 </Link>
 
                 <h3>What is the name of the pokemon you're looking for?</h3>

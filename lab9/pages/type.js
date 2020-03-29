@@ -1,6 +1,7 @@
 import React from "react";
 import Head from "next/head";
 import Link from "next/link";
+import Style from '../components/Style.module.css'
 
 class PokeType extends React.Component {
     getType(){
@@ -19,12 +20,12 @@ class PokeType extends React.Component {
     }
     render(){
         return(
-        <div>
+        <div className={Style.general}>
             <Head>
                 <title>Type</title>
             </Head>
             <Link href="/">
-                <a>Back</a>
+                <a className={Style.links}>Back</a>
             </Link>
 
             <h3>What type of pokemon are you looking for?</h3>
