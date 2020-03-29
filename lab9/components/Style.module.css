@@ -1,0 +1,14 @@
+/*font, color, be creative*/
+.links {
+    color: darkblue;
+    text-decoration: none;
+    font-style: normal;
+}
+.links:hover, .links:active {
+    color: royalblue;
+}
+
+.general{
+    font-family: Arial, Helvetica, sans-serif;
+
+}
