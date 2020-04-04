@@ -1,7 +1,20 @@
+# Project Information
+## Code Option
+Option A: Using existing lab code, based either on using the Movies database or on searching for Pokemon, extend it into something more polished. This means adding more CSS, pages (if using Next), or more components. There should be at least two more components and eight new CSS rules.
+
+## Hosting Option
+Option A: Use GitHub Pages to host your final project.
+
+## Objective
+- Create component-based single-page or multi-page applications using React
+- Optionally use Route-based delivery paths in Express or Next
+- Optionally use MongoDB to access database systems
+- Use RESTful design practices in designing web applications
+
+# Next Information
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/zeit/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
-
 First, run the development server:
 
 ```bash
@@ -15,7 +28,6 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
 
 ## Learn More
-
 To learn more about Next.js, take a look at the following resources:
 
 - [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
@@ -24,7 +36,6 @@ To learn more about Next.js, take a look at the following resources:
 You can check out [the Next.js GitHub repository](https://github.com/zeit/next.js/) - your feedback and contributions are welcome!
 
 ## Deploy on ZEIT Now
-
 The easiest way to deploy your Next.js app is to use the [ZEIT Now Platform](https://zeit.co/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
