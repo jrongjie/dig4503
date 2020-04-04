@@ -1,21 +1,18 @@
-import Pokemon from 'json-pokemon/getPokemon';
+import pokemon from 'json-pokemon';
 
-function findType(req, res){
-    
-    for(let i=0; i<pokemon.length; i++){
-        for(let p=0; pokemon[i].typeList.length; p++){
-            if(pokemon[i].typeList[p] == req.query.pokeType){
-                result.push(pokemon[i]);
-            } else {
-                break;
-            }
-        }
-        if(result.length > 1){
-            result.shift();
-        }
-    
-        res.json(result);
-    }
+export default (req, res) => {
+  let result = [];
+  const type = req.query.type;
+
+  pokemon.forEach((pokemonObject) => {
+
+    pokemonObject.typeList.forEach((typeProperty) => {
+
+      if(type === typeProperty) {
+        result.push(pokemonObject);
+      }
+    });
+  });
+
+  res.json(result);
 }
-
-export default findType;
