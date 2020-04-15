@@ -15,7 +15,7 @@ class PokeId extends React.Component {
             if(processed.error){
                 resultElement.innerHTML = "We don\'t have any pokemon under that ID number at this shelter.";
             } else{
-                resultElement.innerHTML = "Are you looking for, " + processed.id+ ", a " + processed.name + "?";
+                resultElement.innerHTML = "Are you looking for, " + processed.id+ ", a " + processed.name + " to add to your party?";
   
             }
         });
@@ -34,7 +34,8 @@ class PokeId extends React.Component {
                 <input type="text" id="pokeId"/>
                 <button onClick = {() => {this.getId()}}>Search</button>
 
-                <div id="reportingArea"></div>
+                <div id="reportingArea">
+                </div>
             </div>
         )
     }

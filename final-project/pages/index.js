@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
-import Style from '../components/Style.module.css'
+import Style from "../components/Style.module.css";
+//import Party from "../components/Party";
 
 const Pokemon = () => {
     return(
@@ -10,7 +11,7 @@ const Pokemon = () => {
             </Head>
 
             <h1>Welcome to the Pokemon shelter!</h1>
-            <p>Find a pokemon companion today...</p>
+            <p>Find a pokemon companion today to add to your party for adventure!</p>
             <Link href="/id">
                 <a className={Style.links}>Search by ID</a>
             </Link>

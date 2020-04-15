@@ -14,6 +14,7 @@ class NameSearch extends React.Component {
             
             if(processed.error) {
                 reporting.innerHTML = "You're a fake, that\'s not a real name!";
+
             } else {
                 reporting.innerHTML = "According to my pokedex, " + processed.id+ ", you\'re a " + processed.name + "! I knew it!";
             }
