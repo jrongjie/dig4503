@@ -2,20 +2,20 @@ import React from 'react';
 
 class IdSearch extends React.Component {
     idGrabber(event){
-        event.preventDefault();
+        event.preventDefault();  
         
-        let pokeId = document.querySelector("#pokeId");
+        let formId = document.querySelector("#pokeId");
                     
-        fetch("http://localhost:3000//api/pokemon/id/" + pokeId.value).then((res) => {
+        fetch("http://localhost:80/id/" + formId.value).then((res) => {
             return res.json();
         
         }).then((processed) => {
             let reporting = document.querySelector("#reportingArea");
                 
             if(processed.error) {
-                reporting.innerHTML = "You're a fake, that\'s not a real number!";
+                reporting.innerHTML = processed.error;
             } else {
-                reporting.innerHTML = "According to my pokedex, " + processed.id+ ", you\'re a " + processed.name + "! I knew it!";
+                reporting.innerHTML = "So you are a " + processed.name + "! I knew it!";
             }
         });
     };

@@ -1,18 +1,19 @@
 {
   "name": "final-project",
-  "version": "0.1.0",
-  "private": true,
+  "version": "1.0.0",
+  "description": "dig4503 final project",
+  "main": "index.js",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "export": "next export"
+    "server": "node index.js",
+    "build": "cd client && npm run start",
+    "start": "concurrently 'npm:server' 'npm:build'"
   },
+  "author": "Jenny Gardner",
+  "license": "ISC",
   "dependencies": {
-    "json-pokemon": "^1.0.0",
-    "next": "9.3.4",
-    "react": "16.13.1",
-    "react-dom": "16.13.1"
-  },
-  "homepage": "https://jrongjie.github.io/dig4503/"
+    "concurrently": "^5.1.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "json-pokemon": "^1.0.0"
+  }
 }
