@@ -5,9 +5,9 @@
             function idGrabber(event) {
                 event.preventDefault();
                 
-                let formId = document.querySelector("#pokeId");
+                let pokeId = document.querySelector("#pokeId");
                 
-                fetch("/id/" + formId.value).then((res) => {
+                fetch("/id/" + pokeId.value).then((res) => {
                     return res.json();
                 }).then((processed) => {
                     let reporting = document.querySelector("#reportingArea");
@@ -22,9 +22,26 @@
             function nameGrabber(event) {
                 event.preventDefault();
                 
-                let formName = document.querySelector("#pokeName");
+                let pokeName = document.querySelector("#pokeName");
                 
-                fetch("/name/" + formName.value).then((res) => {
+                fetch("/name/" + pokeName.value).then((res) => {
+                    return res.json();
+                }).then((processed) => {
+                    let reporting = document.querySelector("#reportingArea");
+                    
+                    if(processed.error) {
+                        reporting.innerHTML = processed.error;
+                    } else {
+                        reporting.innerHTML = processed.name + ", I choose you!";
+                    }
+                });
+            }
+            function nameGrabber(event) {
+                event.preventDefault();
+                
+                let pokeName = document.querySelector("#pokeName");
+                
+                fetch("/name/" + pokeName.value).then((res) => {
                     return res.json();
                 }).then((processed) => {
                     let reporting = document.querySelector("#reportingArea");
