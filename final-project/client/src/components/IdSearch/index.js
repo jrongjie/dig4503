@@ -4,9 +4,9 @@ class IdSearch extends React.Component {
     idGrabber(event){
         event.preventDefault();  
         
-        let formId = document.querySelector("#pokeId");
+        let pokeId = document.querySelector("#pokeId");
                     
-        fetch("http://localhost:80/id/" + formId.value).then((res) => {
+        fetch("http://localhost:80/id/" + pokeId.value).then((res) => {
             return res.json();
         
         }).then((processed) => {

@@ -4,9 +4,9 @@ class NameSearch extends React.Component {
     nameGrabber(event){
         event.preventDefault();
                     
-        let formName = document.querySelector("#pokeName");
+        let pokeName = document.querySelector("#pokeName");
         
-        fetch("http://localhost:80/name/" + formName.value).then((res) => {
+        fetch("http://localhost:80/name/" + pokeName.value).then((res) => {
             return res.json();
 
         }).then((processed) => {
